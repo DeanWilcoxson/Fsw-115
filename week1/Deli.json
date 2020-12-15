@@ -2,15 +2,28 @@
     "Menu": {
         "Appetizers": {
             "Jalapeno Poppers": {
-                "Ingredients": ["Jalapenos", "Cheddar Cheese", "Egg", "Flour"],
+                "Ingredients": [
+                    "Jalapenos",
+                    "Cheddar Cheese",
+                    "Egg",
+                    "Flour"
+                ],
                 "Description": "Fresh Jalapeno stuffed with Cheddar Cheese, Breaded with Egg Yolk and Flour then Deep Fried."
             },
             "Onion Rings": {
-                "Ingredients": ["Onion", "Egg", "Flour"],
+                "Ingredients": [
+                    "Onion",
+                    "Egg",
+                    "Flour"
+                ],
                 "Description": "Fresh Onion, Breaded with Egg Yolk and Flour then Deep Fried."
             },
             "French Fries": {
-                "Ingredients": ["Potatoes", "Salt", "Pepper"],
+                "Ingredients": [
+                    "Potatoes",
+                    "Salt",
+                    "Pepper"
+                ],
                 "Description": "Chopped Potatoes, Seasoned and Deep Fried."
             }
         },
@@ -36,7 +49,11 @@
                 "Description": "A crisp tall glass of Mountain Dew with Ice."
             },
             "Green Tea": {
-                "Ingredients": ["Green Tea Leaves", "Caffeine", "Sugar"],
+                "Ingredients": [
+                    "Green Tea Leaves",
+                    "Caffeine",
+                    "Sugar"
+                ],
                 "Description": "A Fresh Brewed glass of Green  tea with Ice."
             }
         },
@@ -113,17 +130,41 @@
             }
         },
         "Desserts": {
+            "Strawberry Milkshake": {
+                "Ingredients": [
+                    "Vanilla Ice Cream",
+                    "Fresh Strawberries",
+                    "Whipped Cream"
+                ],
+                "Description": "A Strawberry Milkshake, Topped with whipped cream and chopped fresh Strawberries."
+            },
             "Cheese Cake": {
-                "Ingredients": [],
-                "Description": ""
+                "Ingredients": [
+                    "Cream",
+                    "Cream Cheese",
+                    "Butter",
+                    "Sour Cream",
+                    "Sugar",
+                    "Egg",
+                    "Graham Cracker",
+                    "Vanilla Extract"
+                ],
+                "Description": "Sweet and Savory Cheesecake, on a graham cracker crust."
             },
             "Snickerdoodle Cookies": {
-                "Ingredients": [],
-                "Description": ""
-            },
-            "Strawberry Milkshake": {
-                "Ingredients": [],
-                "Description": ""
+                "Ingredients": [
+                    "Egg",
+                    "Cinnamon",
+                    "Ground Cinnamon",
+                    "Flour",
+                    "Butter",
+                    "Unsalted Butter",
+                    "Brown Sugar",
+                    "Sugar",
+                    "Granulated Sugar",
+                    "Baking Powder"
+                ],
+                "Description": "Soft & Warm Cinnamon Sugar Cookie."
             }
         }
     }
