@@ -1,39 +1,130 @@
 {
-    "Appetizers": [{
-        "Jalapeno Poppers": {
-            "Name": "Jalapeno Poppers",
-            "Ingredients": ["Jalapeno's", "Cheddar Cheese", "Eggs", "Flour"],
-            "Description": "Fresh Jalapeno stuffed with Cheddar Cheese, Breaded with Egg Yolk and Flour then Deep Fried."
+    "Menu": {
+        "Appetizers": {
+            "Jalapeno Poppers": {
+                "Ingredients": ["Jalapenos", "Cheddar Cheese", "Egg", "Flour"],
+                "Description": "Fresh Jalapeno stuffed with Cheddar Cheese, Breaded with Egg Yolk and Flour then Deep Fried."
+            },
+            "Onion Rings": {
+                "Ingredients": ["Onion", "Egg", "Flour"],
+                "Description": "Fresh Onion, Breaded with Egg Yolk and Flour then Deep Fried."
+            },
+            "French Fries": {
+                "Ingredients": ["Potatoes", "Salt", "Pepper"],
+                "Description": "Chopped Potatoes, Seasoned and Deep Fried."
+            }
         },
-        "Onion Rings": {
-            "Name": "Onion Rings",
-            "Ingredients": ["Onions", "Eggs", "Flour"],
-            "Description": "Fresh Onion, Breaded with Egg Yolk and Flour then Deep Fried."
+        "Drinks": {
+            "Mountain Dew": {
+                "Ingredients": [
+                    "Carbonated Water",
+                    "High Fructose CornSyrup",
+                    "Concentrated Orange Juice",
+                    "Citric Acid",
+                    "Caffeine"
+                ],
+                "Description": "A crisp tall glass of Mountain Dew with Ice."
+            },
+            "Sprite": {
+                "Ingredients": [
+                    "Carbonated Water",
+                    "High Fructose CornSyrup",
+                    "Concentrated Lemon Juice",
+                    "Citric Acid",
+                    "Caffeine"
+                ],
+                "Description": "A crisp tall glass of Mountain Dew with Ice."
+            },
+            "Green Tea": {
+                "Ingredients": ["Green Tea Leaves", "Caffeine", "Sugar"],
+                "Description": "A Fresh Brewed glass of Green  tea with Ice."
+            }
         },
-        "French Fries": {
-            "Name": "French Fries",
-            "Ingredients": ["Potatoes", "Salt", "Pepper"],
-            "Description": "Chopped Potatoes, Seasoned and Deep Fried."
+        "Cold Sandwiches": {
+            "Cold-Cut Combination": {
+                "Ingredients": [
+                    "Turkey",
+                    "Salami",
+                    "Roast Beef",
+                    "Pepper-Jack Cheese",
+                    "Wheat Bread",
+                    "Lettuce",
+                    "Tomato"
+                ],
+                "Description": "Turkey, Salami, and Roast Beef on Wheat Bread, with Pepperjack Cheese, Lettuce and Tomato."
+            },
+            "Veggie Sandwich": {
+                "Ingredients": [
+                    "Lettuce",
+                    "Avocado",
+                    "Pickle",
+                    "Onion",
+                    "Tomato",
+                    "Pepper-Jack Cheese",
+                    "Mayonnaise",
+                    "Wheat Bread"
+                ],
+                "Description": "Lettuce, Avocado, Tomato, Pickle, Onion and PepperJack Cheese on Wheat bread with Mayonnaise."
+            },
+            "Ham & Cheese": {
+                "Ingredients": [
+                    "Honey Ham",
+                    "Multigrain Bread",
+                    "Cheddar Cheese",
+                    "Mayonnaise",
+                    "Lettuce",
+                    "Tomato"
+                ],
+                "Description": "Honey Ham and Cheddar Cheese with Lettuce, Tomato and Mayonnaise on Multigrain Bread."
+            }
+        },
+        "Hot Sandwiches": {
+            "Grilled Ham & Cheese": {
+                "Ingredients": [
+                    "Honey Ham",
+                    "Multigrain Bread",
+                    "Cheddar Cheese",
+                    "Butter"
+                ],
+                "Description": "Ham and Cheese sandwich buttered and grilled in a pan."
+            },
+            "Meatball Parm Sub": {
+                "Ingredients": [
+                    "Meatballs",
+                    "Marinara sauce",
+                    "Mozzarella Cheese",
+                    "Pepper",
+                    "Onion",
+                    "Olive"
+                ],
+                "Description": "Sliced Meatballs in Marinara Sauce With Onions, Olives and Mozzarella Cheese Seasoned and Toasted"
+            },
+            "Turkey Melt": {
+                "Ingredients": [
+                    "Turkey",
+                    "Avocado",
+                    "Pepper-Jack Cheese",
+                    "Tomato",
+                    "Lettuce",
+                    "Sourdough Bread",
+                    "Butter"
+                ],
+                "Description": "Turkey, PepperJack Cheese, Avocado, Lettuce Tomato on Sourdough bread Grilled"
+            }
+        },
+        "Desserts": {
+            "Cheese Cake": {
+                "Ingredients": [],
+                "Description": ""
+            },
+            "Snickerdoodle Cookies": {
+                "Ingredients": [],
+                "Description": ""
+            },
+            "Strawberry Milkshake": {
+                "Ingredients": [],
+                "Description": ""
+            }
         }
-    }],
-    "Cold Sandwiches": [{
-        "Cold-Cut Combination": {
-            "Name": "Cold-Cut Combination",
-            "Ingredients": ["Turkey", "Salami", "Roast Beef", "Pepper-Jack Cheese", "Wheat Bread", "Lettuce", "Tomato"],
-            "Description": "Turkey, Salami, and Roast Beef on Wheat Bread, with Pepperjack Cheese Lettuce and Tomato."
-        },
-        "Veggie Sandwich": {
-            "Name": "Veggie Sandwich",
-            "Ingredients": ["Pickle", "Onion", "Avocado", "Pepper-Jack Cheese", "Wheat Bread", "Lettuce", "Tomato"],
-            "Description": ""
-        },
-        "Ham & Cheese": {
-            "Name": "Ham & Cheese",
-            "Ingredients": [""],
-            "Description": ""
-        }
-    }],
-    "Hot Sandwiches": [{}],
-    "Desserts": [{}],
-    "Drinks": [{}]
+    }
 }
