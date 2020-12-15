@@ -1,0 +1,39 @@
+{
+    "Appetizers": [{
+        "Jalapeno Poppers": {
+            "Name": "Jalapeno Poppers",
+            "Ingredients": ["Jalapeno's", "Cheddar Cheese", "Eggs", "Flour"],
+            "Description": "Fresh Jalapeno stuffed with Cheddar Cheese, Breaded with Egg Yolk and Flour then Deep Fried."
+        },
+        "Onion Rings": {
+            "Name": "Onion Rings",
+            "Ingredients": ["Onions", "Eggs", "Flour"],
+            "Description": "Fresh Onion, Breaded with Egg Yolk and Flour then Deep Fried."
+        },
+        "French Fries": {
+            "Name": "French Fries",
+            "Ingredients": ["Potatoes", "Salt", "Pepper"],
+            "Description": "Chopped Potatoes, Seasoned and Deep Fried."
+        }
+    }],
+    "Cold Sandwiches": [{
+        "Cold-Cut Combination": {
+            "Name": "Cold-Cut Combination",
+            "Ingredients": ["Turkey", "Salami", "Roast Beef", "Pepper-Jack Cheese", "Wheat Bread", "Lettuce", "Tomato"],
+            "Description": "Turkey, Salami, and Roast Beef on Wheat Bread, with Pepperjack Cheese Lettuce and Tomato."
+        },
+        "Veggie Sandwich": {
+            "Name": "Veggie Sandwich",
+            "Ingredients": ["Pickle", "Onion", "Avocado", "Pepper-Jack Cheese", "Wheat Bread", "Lettuce", "Tomato"],
+            "Description": ""
+        },
+        "Ham & Cheese": {
+            "Name": "Ham & Cheese",
+            "Ingredients": [""],
+            "Description": ""
+        }
+    }],
+    "Hot Sandwiches": [{}],
+    "Desserts": [{}],
+    "Drinks": [{}]
+}
