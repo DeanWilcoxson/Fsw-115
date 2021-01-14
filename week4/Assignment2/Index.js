@@ -1,24 +1,29 @@
-const getData = document.getElementById("SwApi2");
-getData.addEventListener("click", function() {
+function people() {
     axios.get("https://swapi.dev/api/people")
-        .then(response => {
+        .then((response) => {
             for (i = 0; i < response.data.results.length; i++) {
                 const h1 = document.createElement("h1");
-                h1.innerHTML = `${response.data.results[i].name}`
-                document.body.append(h1)
+                h1.innerHTML = `${response.data.results[i].name}`;
+                h1.style.textAlign = "center";
+                h1.style.color = "blue"
+                h1.style.backgroundColor = "darkgrey"
+                document.body.append(h1);
             }
         })
-        .catch((error) => alert("error"))
-})
-const otherData = document.getElementById("SwApi1");
-otherData.addEventListener("click", function() {
+        .catch((error) => alert("error"));
+}
+
+function planets() {
     axios.get("https://swapi.dev/api/planets")
         .then(response => {
             for (i = 0; i < response.data.results.length; i++) {
                 const h1 = document.createElement("h1");
-                h1.innerHTML = `${response.data.results[i]}`
+                h1.innerHTML = `${response.data.results[i].name}`
+                h1.style.textAlign = "center"
+                h1.style.color = "blue"
+                h1.style.backgroundColor = "darkgrey"
                 document.body.append(h1)
             }
         })
         .catch((error) => alert("error"))
-})
+}
