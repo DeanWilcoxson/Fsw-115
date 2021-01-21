@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Axios Todo</title>
+</head>
+
+<body>
+    <form name="formName">
+        <b>API / JSON Form</b>
+        <br />
+        <input name="title" type="text" placeholder="TITLE" required/>
+        <br />
+        <input name="price" type="number" placeholder="PRICE" required/>
+        <br />
+        <textarea name="description" type="text" placeholder="DESCRIPTION" required></textarea>
+        <br />
+        <span>Completed<input id="completed" type="checkbox"/></span>
+        <button>Post</button>
+    </form>
+    <button onclick="getData()">Get API Data</button>
+    <ol id="todoData"></ol>
+    <script src="Index.js" async></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js" async></script>
+</body>
+
+</html>
