@@ -1,8 +1,10 @@
+let data = document.getElementById("todoData");
 let form = document.formName;
-form.style.border = "3px solid blue";
-form.style.width = "200px";
-form.style.display = "flex";
-form.style.flexDirection = "column";
+
+function deleteData() {
+  data.innerHTML = "TO-DO List";
+}
+
 form.addEventListener("submit", function (event) {
   event.preventDefault();
   const newItem = {
@@ -11,63 +13,95 @@ form.addEventListener("submit", function (event) {
     price: form.price.value,
     completed: form.completed.checked,
   };
+  console.log(newItem);
   axios
     .post("https://api.vschool.io/DeanWilcoxson/todo", newItem)
-    .then((response) => console.log(response.data))
+    .then(form.reset())
+    .then(deleteData())
+    .then((response) => getData())
     .catch((error) => alert("error"));
 });
 
+let updateComplete = (e) => {
+  let checkBox = document.getElementsByClassName("checkBox");
+  for (i = 0; i < checkBox.length; i++) {
+    // if (checkBox[i].type === "checkbox") {
+      if (e.target == checkBox[i]) {
+        console.log("hi");
+        let item = checkBox[i].parentNode;
+        if (checkBox[i].checked) {
+          item.style.textDecoration = "line-through";
+          item.style.color = "grey";
+          item.style.border = "1px solid black";
+          checkBox[i].checked = true;
+        } else {
+          item.style.border = "1px solid black";
+          checkBox[i].checked = false;
+          item.style.textDecoration = "none";
+          item.style.color = "black";
+        }
+        let id = item.id;
+        let comp = {
+          completed: checkBox[i].checked,
+        };
+        axios.put(`https://api.vschool.io/DeanWilcoxson/todo/${id}`, comp);
+      // }
+    }
+  }
+};
 async function getData() {
   axios
     .get("https://api.vschool.io/DeanWilcoxson/todo")
     .then((response) => {
       for (let i = 0; i < response.data.length; i++) {
-        let data = document.getElementById("todoData");
-
-        const p = document.createElement("p");
+        const item = document.createElement("div");
+        item.setAttribute(`id`, response.data[i]._id);
+        item.textContent = `Title: ${response.data[i].title}, Description: ${response.data[i].description}`;
+        item.style.display = "flex";
+        item.style.flexDirection = "row";
+        item.style.alignItems = "center";
+        item.style.justifyContent = "space-between";
+        item.style.backgroundColor = "beige";
 
         const checkbox = document.createElement("input");
         checkbox.type = "checkbox";
+        checkbox.className = "checkBox";
+        checkbox.onchange = updateComplete;
+        item.append(checkbox);
 
         const deleteButton = document.createElement("button");
         deleteButton.classList = "delete";
-        deleteButton.textContent = "delete";
+        deleteButton.textContent = "X";
+        deleteButton.style.backgroundColor = "red";
+        item.append(deleteButton);
 
-        const editButton = document.createElement("button");
-        editButton.textContent = "edit";
-        
+        // const editButton = document.createElement("button");
+        // editButton.textContent = "edit";
+        // item.append(editButton);
+
         if (response.data[i].completed === true) {
-          p.textContent = `Title: ${response.data[i].title}, Description: ${response.data[i].description}, Price: ${response.data[i].price}`;
-          p.style.textDecoration = "line-through";
-          p.style.color = "grey";
-          p.style.border = "1px solid black";
+          item.style.textDecoration = "line-through";
+          item.style.color = "grey";
+          item.style.border = "1px solid black";
           checkbox.checked = true;
-        } 
-        
-        else {
-          p.textContent = `Title: ${response.data[i].title}, Description: ${response.data[i].description}, Price: ${response.data[i].price}`;
-          p.style.border = "1px solid black";
+        } else {
+          item.style.border = "1px solid black";
         }
+        data.appendChild(item);
 
-        p.style.display = "flex";
-        p.style.flexDirection = "row";
-        p.style.alignItems = "center";
-        p.style.justifyContent = "space-around";
-        p.append(editButton);
-        p.append(deleteButton);
-        p.append(checkbox);
-        data.appendChild(p);
-
-        p.addEventListener("click", function (e) {
+        item.addEventListener("click", function (e) {
           let deleteButton = document.getElementsByClassName("delete");
           for (i = 0; i < deleteButton.length; i++) {
             if (e.target === deleteButton[i]) {
               let deleted = deleteButton[i].parentNode;
+              console.log(deleted);
+              let x = deleted.id;
+              console.log(x);
               axios
-                .delete("https://api.vschool.io/DeanWilcoxson/todo")
+                .delete(`https://api.vschool.io/DeanWilcoxson/todo/${x}`)
                 .then()
                 .catch((error) => alert("error"));
-              p.remove(deleted);
+              data.removeChild(deleted);
             }
           }
         });
@@ -75,3 +109,5 @@ async function getData() {
     })
     .catch((error) => alert("error"));
 }
+
+getData();
