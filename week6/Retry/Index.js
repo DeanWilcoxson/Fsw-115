@@ -4,7 +4,8 @@ const getData = async () => {
   try {
     const people = await axios.get("https://swapi.dev/api/people/");
     getPerson(people);
-  } catch (error) {
+  } 
+  catch (error) {
     console.log(error);
   }
 };
@@ -12,11 +13,14 @@ const getData = async () => {
 async function getPerson(people) {
   for (let i = 0; i < people.data.results.length; i++) {
     let person = people.data.results[i];
+
     let personVehicles = await getVehicles(person);
     let personFilms = await getFilms(person);
     let personStarships = await getStarships(person);
+
     const personData = document.createElement("div");
     personData.className = "item";
+
     const personName = document.createElement("h1");
     personName.textContent = person.name;
     personName.className = "name";
@@ -24,6 +28,7 @@ async function getPerson(people) {
     personData.append(personFilms);
     personData.append(personVehicles);
     personData.append(personStarships);
+
     listData.appendChild(personData);
   }
 }
