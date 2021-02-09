@@ -19,11 +19,11 @@ async function getPerson(people) {
 
     const personData = document.createElement("div");
     personData.className = "item";
-    
+
     const personName = document.createElement("h1");
     personName.textContent = person.name;
     personName.className = "name";
-    
+
     personData.append(personName);
     personData.append(personFilms);
     personData.append(personVehicles);
@@ -34,12 +34,12 @@ async function getPerson(people) {
 
 async function getVehicles(person) {
   const vehiclesArray = person.vehicles;
-  
+
   if (vehiclesArray.length) {
     let vehiclesList = document.createElement("ol");
     vehiclesList.innerHTML = "Vehicles";
     vehiclesList.className = "vehiclesList";
-    
+
     for (var l = 0; l < vehiclesArray.length; l++) {
       const vehicle = await axios.get(vehiclesArray[l]);
       const li = document.createElement("li");
@@ -47,7 +47,7 @@ async function getVehicles(person) {
       li.className = "vehicles";
       vehiclesList.appendChild(li);
     }
-    
+
     return vehiclesList;
   } else {
     return "";

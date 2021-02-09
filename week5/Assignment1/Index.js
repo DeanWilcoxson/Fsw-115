@@ -47,7 +47,6 @@ async function getData() {
   axios.get("https://api.vschool.io/DeanWilcoxson/todo")
     .then((response) => {
       for (let i = 0; i < response.data.length; i++) {
-        
         const item = document.createElement("div");
         item.setAttribute(`id`, response.data[i]._id);
         item.textContent = `Title: ${response.data[i].title}, Description: ${response.data[i].description}`;

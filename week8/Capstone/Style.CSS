@@ -1,0 +1,132 @@
+body {
+    background-image: url("https://mlpnk72yciwc.i.optimole.com/cqhiHLc.WqA8~2eefa/w:1200/h:675/q:75/rt:fill/g:ce/https://bleedingcool.com/wp-content/uploads/2020/04/evvjn6zuwaab3cz.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+header {
+    font-family: "50 blizzards";
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+footer {
+    font-family: "50 blizzards";
+    text-shadow: black 2px 2px 5px;
+    text-align: center;
+}
+
+#listData {
+    padding: 0px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#header {
+    font-size: 48px;
+    text-shadow: black 2px 2px 3px;
+}
+
+#businessDesc {
+    font-family: "50 blizzards";
+}
+
+#motto {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+}
+
+#header {
+    text-align: justify;
+    font-weight: bold;
+    color: blue;
+}
+
+#formGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#form {
+    background-color: lightblue;
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid grey;
+    box-shadow: black 5px 5px 10px;
+}
+
+#formDesc {
+    padding: 20px;
+    text-decoration: underline;
+    font-family: "50 blizzards";
+    grid-column: 2/3;
+}
+
+#contactList {
+    font-family: none;
+    list-style-type: none;
+}
+
+#title {
+    background-color: beige;
+}
+
+#cash {
+    background-color: beige;
+}
+
+#description {
+    background-color: beige;
+}
+
+#request {
+    border: 5px lightblue outset;
+    text-shadow: black 2px 2px 3px;
+    background-color: lightBlue;
+}
+
+#olInfo {
+    font-family: "50 blizzards";
+    padding: 20px;
+    grid-column: 2/3;
+    text-decoration: underline;
+}
+
+.jobItem {
+    grid-column: 2/3;
+    text-align: justify;
+    display: grid;
+    grid-template-rows: auto;
+    border: 5px lightblue outset;
+    text-shadow: black 2px 2px 3px;
+    background-color: rgba(173, 216, 230, 0.198);
+}
+
+.estimated {
+    margin: 0px;
+}
+
+.jobInfo {
+    margin: 0;
+}
+
+.jobDesc {
+    margin: 0;
+}
+
+.jobCost {
+    margin: 0;
+}
+
+.worker {
+    margin: 0;
+}
+
+.planet {
+    margin: 0;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.CSS">
+    <title>Capstone</title>
+</head>
+
+<body>
+    <header id="headerGrid">
+        <h1 id="header">Skywalker and Son</h1>
+        <h4 id="businessDesc">OddJob Handyman Service</h4>
+        <h5 id="motto">"Protecting Peace and your HouseHold Chores Across the Galaxy"</h5>
+    </header>
+    <hr>
+    <div id="formGrid">
+        <p id="formDesc">Please Fill out the Form with the most current Information on the Job. Employees are not legally, or financially liable for any damages done to, for or against the client or property of the client, in pursuit of completion of the Job.</p>
+        <form id="form" name="form">
+            <input id="title" type="text" placeholder="Enter a Task" name="title" required></input>
+            <textarea id="description" type="text" placeholder="Describe the Task" name="description" required/></textarea>
+            <input type=" number" id="cash" placeholder="Amount held for Payment" name="price">
+            </input>
+            <button onclick="postIt()" id="request">Post Job Request</button>
+        </form>
+    </div>
+    <ol id="listData">
+        <b id="olInfo">Your Request will be displayed here</b>
+    </ol>
+    <hr>
+    <footer>
+        <p id="developer">2021 WebDev Student Dean Wilcoxson</p>
+        <ol id="contactList">Contact Info:
+            <li>1(209)~416~2889</li>
+            <li>dean.wilcoxson@bryanuniversity.edu</li>
+        </ol>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
+    <script src="Logic.JS"></script>
+</body>
+
+</html>
