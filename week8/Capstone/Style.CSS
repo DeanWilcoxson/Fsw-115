@@ -7,6 +7,7 @@ body {
 header {
     font-family: "50 blizzards";
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -17,6 +18,10 @@ footer {
     font-family: "50 blizzards";
     text-shadow: black 2px 2px 5px;
     text-align: center;
+}
+
+.editForm {
+    display: none
 }
 
 #listData {
@@ -64,7 +69,7 @@ footer {
     padding: 20px;
     text-decoration: underline;
     font-family: "50 blizzards";
-    grid-column: 2/3;
+    grid-column: 1/4;
 }
 
 #contactList {
@@ -91,9 +96,10 @@ footer {
 }
 
 #olInfo {
+    grid-column: 1/4;
     font-family: "50 blizzards";
     padding: 20px;
-    grid-column: 2/3;
+    /* grid-column: 2/3; */
     text-decoration: underline;
 }
 
@@ -107,12 +113,14 @@ footer {
     background-color: rgba(173, 216, 230, 0.198);
 }
 
-.estimated {
-    margin: 0px;
+.jobInfo {
+    display: grid;
+    grid-template-rows: auto;
+    margin: 0;
 }
 
-.jobInfo {
-    margin: 0;
+.estimated {
+    margin: 0px;
 }
 
 .jobDesc {
