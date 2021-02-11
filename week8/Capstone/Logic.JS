@@ -30,22 +30,15 @@ const updateIt = async (newObject, e) => {
 };
 
 const deleteIt = (e) => {
-  // for (i = 0; i < deleteButton.length; i++) {
-  //   if (e.target === deleteButton[i]) {
-  //     let deleted = deleteButton[i].parentNode;
-  //     console.log(deleted);
-  //     let x = deleted.id;
-  //     console.log(x);
+  console.log(e)
   axios
     .delete(`https://api.vschool.io/DeanWilcoxson/todo/${e}`)
     .then((res) => {
       getIt();
     })
-    .catch((error) => alert("error"));
-  document.removeChild(deleted);
+    .catch((error) => console.log(error));
 };
-//   }
-// };
+
 let deleteButton = document.getElementsByClassName("del");
 for (let i = 0; i < deleteButton.length; i++) {
   deleteButton.addEventListener("click", deleteIt);
@@ -63,9 +56,8 @@ const postIt = (e) => {
     .post("https://api.vschool.io/DeanWilcoxson/todo", newJobRequest)
     .then(form.reset())
     .then(deleteIt())
-    .then((response) => getIt())
+    .then(getIt())
     .catch((error) => {
-      alert("error");
       console.log(error);
     });
 };
@@ -150,7 +142,8 @@ const getInfo = async (infoData) => {
           price: formPrice.value,
         };
         editForm.classList.toggle("editForm");
-        editForm.classList.value === "editForm" && updateIt(newObject, infoData[i]._id);
+        editForm.classList.value === "editForm" &&
+          updateIt(newObject, infoData[i]._id);
       });
 
       let editForm = document.createElement("form");
