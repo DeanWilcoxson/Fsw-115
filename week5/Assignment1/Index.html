@@ -19,12 +19,19 @@
             <br />
             <textarea name="description" type="text" placeholder="DESCRIPTION" required></textarea>
             <br />
-            <span>Completed<input name="completed" type="checkbox"/></span>
-            <button>Post</button>
+            <span>Completed<input
+            name="completed"
+            type="checkbox"
+            title="completed"
+            placeholder="completed"
+        /></span>
+            <button type="submit">Post</button>
         </form>
     </div>
 
-    <ol id="todoData">TO-DO List</ol>
+    <ol id="todoData">
+        <li></li>
+    </ol>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js" async></script>
     <script src="Index.js" async></script>
